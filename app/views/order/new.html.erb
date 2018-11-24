@@ -1,0 +1,9 @@
+<%= simple_form_for @order do |f| %>
+    <%= f.input :user %>
+    <%= f.input :price %>
+    <%= f.input :days %>
+    <%= f.input :end %>
+    <%= f.input :notes %>
+
+    <%= f.submit 'Enviar' %>
+<% end %>

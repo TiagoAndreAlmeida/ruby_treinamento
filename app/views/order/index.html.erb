@@ -1,0 +1,25 @@
+<%= link_to 'Novo Orçamento', new_order_path, class: 'btn btn-success pull-right' %>
+
+<table class='table table-responsive'>
+    <thead>
+        <tr>
+            <th> ID </th>
+            <th> DATA </th>
+            <th> USER </th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @orders.each do |order| %>
+        <tr>
+            <td><%= order.id %></td>
+        
+            <td><%= order.created_at %></td>
+            <td><%= order.user %></td>
+            <td> 
+                <%= link_to "Visualizar", order_path(order.id), class: "btn btn-primary" %>
+            </td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
